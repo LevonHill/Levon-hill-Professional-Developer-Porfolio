@@ -1,0 +1,152 @@
+:root{
+    /*global colors*/
+    --color-primary:#A32424;
+    --color--secondary:#FFFFFF;
+    --color--tertiary:#ffff0f;
+
+  /* FONT SIZES */
+  --font-size-xs: 1.2rem;  /* 12px */
+  --font-size-sm: 1.4rem;  /* 14px */
+  --font-size-base: 1.6rem; /* 16px */
+  --font-size-md: 1.8rem;  /* 18px */
+  --font-size-lg: 2rem;    /* 20px */
+  --font-size-xl: 2.4rem;  /* 24px */
+  --font-size-xxl: 3.2rem; /* 32px */
+  --font-size-xxxl: 4rem;  /* 40px */
+
+  /* LINE HEIGHTS */
+  --line-height-tight: 1.2;   /* For large headings */
+  --line-height-normal: 1.5;  /* For body text / default */
+  --line-height-relaxed: 1.75; /* For long-form / paragraphs */
+
+  /* SPACING SYSTEM */
+  --space-2xs: 0.4rem;  /* 4px */
+  --space-xs: 0.8rem;   /* 8px */
+  --space-sm: 1.2rem;   /* 12px */
+  --space-md: 1.6rem;   /* 16px */
+  --space-lg: 2.4rem;   /* 24px */
+  --space-xl: 3.2rem;   /* 32px */
+  --space-xxl: 4rem;    /* 40px */
+  --space-xxxl: 4.8rem; /* 48px */
+
+  /* BORDER RADIUS */
+  --radius-sm: 0.4rem;  /* 4px */
+  --radius-md: 0.8rem;  /* 8px */
+  --radius-lg: 1.2rem;  /* 12px */
+  --radius-xl: 2rem;    /* 20px */
+
+  /* SHADOWS */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 6px 12px rgba(0, 0, 0, 0.4);
+
+  /* WIDTHS */
+  --width-container-sm: 540px;
+  --width-container-md: 720px;
+  --width-container-lg: 960px;
+  --width-container-xl: 1140px;
+
+  --width-button-sm: 8rem;   /* 80px */
+  --width-button-md: 12rem;  /* 120px */
+  --width-button-lg: 16rem;  /* 160px */
+
+  --width-avatar-sm: 3.2rem; /* 32px */
+  --width-avatar-md: 4.8rem; /* 48px */
+  --width-avatar-lg: 6.4rem; /* 64px */
+
+  /* HEIGHTS */
+  --height-button-sm: 3.2rem;  /* 32px */
+  --height-button-md: 4rem;    /* 40px */
+  --height-button-lg: 4.8rem;  /* 48px */
+
+  --height-header: 6rem;       /* 60px */
+  --height-footer: 8rem;       /* 80px */
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+
+}
+html{
+    box-sizing: border-box;
+    font: size 62.5%;
+    font-family: sans-serif,  Arial, Helvetica ;
+}
+body{
+    margin: 0 auto;
+    padding: 0;
+}
+a{
+    text-decoration:none;
+}
+li{
+   padding: 10px;
+}
+
+.icon.fas.fa-bars{
+    font-size: var(--font-size-lg);
+  
+}
+
+.container{
+    height: 115px;
+    background-color: var(--color-primary);
+} 
+
+
+
+.flex{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+}
+
+
+/*mobile-nav menu*/
+#menu{
+   
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    list-style-type: none;
+    background-color:#444;
+    color: #000000;
+    border-radius: 8px;
+}
+/* When menu is open */
+#menu.menu-open {
+    opacity: 1;
+  max-height: 550px; /* or enough to fit all li items */
+  transition: max-height 0.5s ease-in;
+}
+/* List items */
+#menu li {
+  padding: 10px 16px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+#menu li:last-child {
+  border-bottom: none;
+}
+
+/* Hover effect for menu list items */
+#menu li:hover {
+  background: #333;
+  color: #fff;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.icon{
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    user-select: none;
+}
