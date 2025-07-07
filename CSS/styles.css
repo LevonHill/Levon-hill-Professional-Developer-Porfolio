@@ -3,6 +3,7 @@
     --color-primary:#A32424;
     --color--secondary:#FFFFFF;
     --color--tertiary:#ffff0f;
+    --color-top-navs:rgb(238, 105, 27);
 
   /* FONT SIZES */
   --font-size-xs: 1.2rem;  /* 12px */
@@ -74,33 +75,46 @@ html{
     font-family: sans-serif,  Arial, Helvetica ;
 }
 body{
+  height: 100vh;
     margin: 0 auto;
     padding: 0;
+    background-image: url(..//images/vector-mar-2021-50_generated.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 a{
     text-decoration:none;
 }
 li{
-   padding: 10px;
+   padding: 1rem;
 }
 
 .icon.fas.fa-bars{
     font-size: var(--font-size-lg);
   
 }
+.home-text{
+  color: #ffff0f;
 
+}
+/*for header section*/
 .container{
+    padding: 2rem 1.5rem;
     height: 115px;
-    background-color: var(--color-primary);
+    background-color: transparent;
 } 
-
-
-
 .flex{
 display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+}
+
+.nav-left-logo a{
+font-style:italic;
+color: black;
+font-weight: 700;
 }
 
 
@@ -112,19 +126,23 @@ justify-content: space-between;
     overflow: hidden;
     transition: max-height 0.3s ease-out;
     list-style-type: none;
-    background-color:#444;
+    border: 2px solid black;
+
     color: #000000;
     border-radius: 8px;
 }
-/* When menu is open */
+/* When menu is open on mobile */
 #menu.menu-open {
     opacity: 1;
-  max-height: 550px; /* or enough to fit all li items */
+  max-height: 1000px; /* or enough to fit all li items */
   transition: max-height 0.5s ease-in;
 }
-/* List items */
+
+
+/* List items mobile */
 #menu li {
-  padding: 10px 16px;
+  width: 100%;
+  padding: 1rem 1.6rem;
   text-align: left;
   border-bottom: 1px solid #444;
 }
@@ -135,8 +153,7 @@ justify-content: space-between;
 
 /* Hover effect for menu list items */
 #menu li:hover {
-  background: #333;
-  color: #fff;
+  color: var(--color--tertiary);
 }
 
 #menu li a {
@@ -149,4 +166,34 @@ justify-content: space-between;
     font-size: var(--font-size-sm);
     cursor: pointer;
     user-select: none;
+}
+
+
+/*media query for Navigation on Desktop and tablet*/
+@media screen and (max-width: 1080px){
+  .list-container{
+padding: var(--space-lg);
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 9px;
+justify-content: space-between;
+}
+
+#menu li:hover {
+  color: var(--color-top-navs);
+}
+
+#menu{
+border: none;
+}
+
+#menu li{
+  width:100%;
+  padding: 1rem auto;
+    opacity: 1;
+    max-height: 500px;
+    overflow: visible;
+    border-bottom: none;
+}
 }
