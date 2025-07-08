@@ -2,15 +2,17 @@
     /*global colors*/
     --color-primary:#A32424;
     --color-primary2:#ff2e2e;
-    --color--secondary:#FFFFFF;
+    --color-secondary:#FFFFFF;
     --color--tertiary:#ffff0f;
     --color-bg-primary:#121212;
+    --color-bg-secondary:#741d1d;
     --color-top-navs:rgb(30, 121, 224);
     --color-btn-primary:rgb(14, 90, 221);
     --color-btn-primary-hover:rgb(64, 129, 241);
     --color-btn-secondary:rgb(25, 141, 35);
     --color-btn-secondary-hover:rgb(104, 208, 113);
-    --color-txt-color:#ece8e8;
+    --color-txt-color:#FDF9B4;
+    --color-txt-backtotop:#ece8e8;
 
   /* FONT SIZES */
   --font-size-xs: 1.2rem;  /* 12px */
@@ -79,7 +81,7 @@
 html{
     box-sizing: border-box;
     font: size 62.5%;
-    font-family: sans-serif,  Arial, Helvetica ;
+    font-family:'Arial', sans-serif ;
 }
 body{
   height: 100vh;
@@ -202,9 +204,9 @@ margin-bottom: var(--space-md);
   
 }
 .hero-text-container{
-  padding: var(--space-md);
+  padding: var(--space-lg);
   margin: var(--space-sm);
-  color: var(--color--secondary);
+  color: var(--color-secondary);
   background-color: var(--color-bg-primary);
   max-width: 600px;
   text-align: center;
@@ -246,7 +248,15 @@ transition: ease-in 0.5s;
 /*mobile about section*/
 .about-section{
   padding: var(--space-xl);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-txt-backtotop);
 }
+
+.about-section p {
+line-height: 1.625;
+letter-spacing: 0.03em;
+}
+
 .about-flex-container{
   display: flex;
   flex-direction: column;
@@ -254,6 +264,20 @@ transition: ease-in 0.5s;
   justify-content: center;
   gap: var(--space-md);
 }
+.nav-back-to-top{
+  color: var(--color-txt-color);
+}
+.nav-back-to-top::after{
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 1,2rem;
+  cursor: pointer;
+  content: " ↑";
+}
+.nav-back-to-top:hover{
+  transform: translate(-2px);
+}
+
 .about-image img{
   width: 400px;
   height: 400px;
@@ -295,4 +319,5 @@ border: none;
     overflow: visible;
     border-bottom: none;
 }
+/*Will add desktop styles for hero-section*/
 }

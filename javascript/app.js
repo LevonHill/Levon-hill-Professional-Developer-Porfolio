@@ -1,6 +1,6 @@
-//const menuToggle = document.getElementById('menu-toggle');
-//const menu = document.getElementById('menu');
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
 
-//menuToggle.addEventListener('click', () => {
- // menu.classList.toggle('menu-open');
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('menu-open');
 });
