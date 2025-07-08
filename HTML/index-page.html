@@ -15,36 +15,91 @@
       content="Levon Hill – Expert web & mobile developer crafting high-performance, scalable applications. Clean code, stunning UI, and seamless user experiences. Build smarter, faster, and better."
     />
     <title>Levon Hill FullStack Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/CSS/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
-  <header class="header container flex">
-    <div class="nav-left-logo">
-     <a href="#">Portfolio</a>
-    </div>
-    <nav class="navigation-container">
-      <ul id="menu" class="list-container menu-closed menu-open ">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="menu-container"><i class="icon fas fa-bars" id="menu-toggle"></i></div>
-  </header>
-  <Main>
-    <section class="hero-section">
-      <div><img src="" alt=""></div>
-      <div class="hero-text-container">
-      <h1>Hello, I'm Levon Hill</h1>
-      <p>I'm a FullStack Developer currently working for Zekelman Industries.</p>
-      <P></P>
-        <a href="#">Learn More</a>
-        <a href="#">Hire Me</a>
+    <header class="header container flex">
+      <div class="nav-left-logo">
+        <a href="#">Portfolio</a>
       </div>
-    </section>
-  </Main>
-  <script src="/javascript/app.js"></script>
+      <nav class="navigation-container">
+        <ul id="menu" class="list-container menu-closed menu-open">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-container">
+        <i class="icon fas fa-bars" id="menu-toggle"></i>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="developer-photo-container">
+          <img src="/images/dev-photo.jpg" alt="photo of developer" />
+        </div>
+        <div class="hero-text-container">
+          <h1>Hello, I'm <span>Levon Hill</span></h1>
+          <p>
+            I'm a FullStack Developer currently working for Zekelman Industries.
+          </p>
+          <p></p>
+          <a class="btn btn-primary" href="#">Learn More</a>
+          <a class="btn btn-secondary" href="#">Hire Me</a>
+        </div>
+      </section>
+      <section class="about-section">
+        <div class="about-flex-container">
+          <div class="about-image" data-aos="fade-right">
+            <img
+              src="..//images/college-photo.jpg"
+              alt="Developer-college-photo"
+            />
+          </div>
+          <a href="#" class="nav-back-to-top">Back To Top</a>
+          <div
+            class="about-text-container"
+            data-aos="fade-left"
+            data-aos="200"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            <h2>About Me</h2>
+            <p>
+              I'm a Full Stack Developer with a background in Information
+              Technology and over 3 years of hands-on IT experience. I graduated
+              from Youngstown State University with a Bachelor's degree in
+              Information Technology, and I'm currently expanding my skill set
+              by pursuing certifications in ServiceNow System Administration and
+              Development.
+            </p>
+            <p>
+              My journey started in IT support, but my passion has always been
+              building, automating, and solving technical problems through code.
+              I now focus on creating efficient, scalable solutions using modern
+              development tools while continuing to grow in the ServiceNow
+              ecosystem.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="/javascript/app.js"></script>
   </body>
 </html>
