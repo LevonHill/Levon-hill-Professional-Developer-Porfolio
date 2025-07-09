@@ -129,21 +129,22 @@ font-weight: 700;
 
 /*mobile-nav menu*/
 #menu{
-   
     opacity: 0;
     max-height: 0;
     overflow: hidden;
+    display: none;
     transition: max-height 0.3s ease-out;
     list-style-type: none;
     border: 2px solid black;
-
     color: #000000;
     border-radius: 8px;
 }
 /* When menu is open on mobile */
-#menu.menu-open {
-    opacity: 1;
-  max-height: 1000px; /* or enough to fit all li items */
+#menu.menu-opened {
+  border: 2px solid black;
+  display: block;
+  opacity: 1;
+  max-height: 300px; /* or enough to fit all li items */
   transition: max-height 0.5s ease-in;
 }
 
@@ -176,6 +177,8 @@ font-weight: 700;
     cursor: pointer;
     user-select: none;
 }
+/*Desktop Nav*/
+
 
 /*MY Mobile hero section*/
 .hero-section{
