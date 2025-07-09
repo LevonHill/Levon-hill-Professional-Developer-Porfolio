@@ -37,7 +37,7 @@
   --space-lg: 2.4rem;   /* 24px */
   --space-xl: 3.2rem;   /* 32px */
   --space-xxl: 4rem;    /* 40px */
-  --space-xxxl: 4.8rem; /* 48px */
+  --space-xxxl: 6rem; /* 60px */
 
   /* BORDER RADIUS */
   --radius-sm: 0.4rem;  /* 4px */
@@ -92,6 +92,9 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+menu{
+  padding-top: var(--height-header);
+}
 a{
     text-decoration:none;
 }
@@ -118,6 +121,14 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
+}
+.fixed{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left:0;
+  z-index: 999;
+  background-color: var(--color-secondary);
 }
 
 .nav-left-logo a{
@@ -201,7 +212,7 @@ z-index: 999;
   gap:var(--space-md);
 }
 .developer-photo-container{
-margin-top: var(--space-sm);
+margin-top: var(--space-xxxl);
 box-shadow: 1 1 1 gray;
 overflow:hidden ;
 margin-bottom: var(--space-md);
