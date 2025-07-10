@@ -13,6 +13,11 @@
     --color-btn-secondary-hover:rgb(104, 208, 113);
     --color-txt-color:#FDF9B4;
     --color-txt-backtotop:#ece8e8;
+    --color-nav-bar-bg:#2d2d32;
+    --color-hamburger-hovered:#747481;
+    --color-badge-primary:#192ea6;
+    --color-badge-secondary: #6b2292;
+    --colorbadge-tertiary:#a8a808;
 
   /* FONT SIZES */
   --font-size-xs: 1.2rem;  /* 12px */
@@ -37,7 +42,7 @@
   --space-lg: 2.4rem;   /* 24px */
   --space-xl: 3.2rem;   /* 32px */
   --space-xxl: 4rem;    /* 40px */
-  --space-xxxl: 6rem; /* 60px */
+  --space-xxxl: 7.5rem; /* 75px */
 
   /* BORDER RADIUS */
   --radius-sm: 0.4rem;  /* 4px */
@@ -92,6 +97,15 @@ body{
     background-position: center;
     background-repeat: no-repeat;
 }
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('/images/—Pngtree—factory\ 3d\ rendering\ roll\ of_5593437\ \(1\).webp') center/cover no-repeat;
+  opacity: 0.3; /* control visibility here */
+  z-index: -1;
+}
+
 menu{
   padding-top: var(--height-header);
 }
@@ -103,12 +117,19 @@ li{
 }
 
 .icon.fas.fa-bars{
-    font-size: var(--font-size-lg);
-  
+  font-size: var(--font-size-lg);
+  padding: 0.5rem;
 }
 .home-text{
   color: #ffff0f;
 
+}
+.menu-container{
+  border-radius: 6px;
+}
+
+.menu-container:hover{
+  background-color: var(--color-hamburger-hovered);
 }
 /*for header section*/
 .container{
@@ -133,8 +154,17 @@ justify-content: space-between;
 
 .nav-left-logo a{
 font-style:italic;
-color: black;
+color: var(--color-secondary);
 font-weight: 700;
+}
+.nav-left-logo:hover{
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+background-color: var(--color-hamburger-hovered);
+}
+
+.header{
+   background-color: var(--color-nav-bar-bg);
 }
 
 
@@ -163,6 +193,7 @@ z-index: 999;
     color:var(--color-primary2);
     border-radius: 8px;
 }
+
 /* When menu is open on mobile */
 #menu.menu-opened {
   transform: translateX(0);
@@ -198,7 +229,9 @@ z-index: 999;
     font-size: var(--font-size-sm);
     cursor: pointer;
     user-select: none;
+    color: var(--color-secondary);
 }
+
 /*Desktop Nav*/
 
 
@@ -315,6 +348,118 @@ letter-spacing: 0.03em;
   max-width: 600px;
   font-size: var(--font-size-base);
   line-height: var(--line-height-normal);
+}
+/*mobile projects section*/ 
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  align-items: center; /* centers cards horizontally on mobile */
+}
+/*The card itself*/
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.card-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 4px solid black;
+}
+.sp-image{
+  filter: blur(2.1px);
+}
+.card-body {
+  padding: var(--space-md);
+}
+.card-body p{
+  text-align: center;
+  margin: bottom 2px;
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+.card-paragraph-text{
+  color: var(--color-txt-color);
+  line-height: var(--line-height-relaxed);
+margin-bottom: var(--space-md);
+}
+
+.card-linka:link{
+color: var(--color-btn-secondary);
+}
+.card-link a:visited{
+color:#e27c8b;
+}
+.card-link a:hover{
+  color: #ebc8cd;
+}
+
+.card-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  list-style: none;
+  padding: 0;
+   margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+  justify-content: space-evenly;
+}
+.list-list-item {
+  width: 80px;
+  height: 80px;
+  background-size: 50%; /* or try 50% if it looks too large */
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+/*svg's*/
+.bg-primary{
+ background-image: url(/images/html-five-svgrepo-com.svg);
+  background-position: center;
+  background-size: cover;
+   background-repeat: no-repeat;
+   height: 90px;
+  
+}
+
+.bg-secondary{
+ background-image: url(/images/css-3-svgrepo-com.svg);
+  background-position: center;
+  background-size: cover;
+   background-repeat: no-repeat;
+  
+}
+.bg-tertiary{
+  background-image: url(/images/javascript-logo-to-use-svgrepo-com.svg);
+  background-position: center;
+  background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.card-link{
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  list-style: none;
+  margin-bottom: var(--space-sm);
+
 }
 
 /*media query for Navigation on Desktop and tablet*/

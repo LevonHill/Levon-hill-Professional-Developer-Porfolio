@@ -42,7 +42,7 @@
     <main>
       <section class="hero-section">
         <div class="developer-photo-container">
-          <img src="/images/dev-photo.jpg" alt="photo of developer" />
+          <img src="/images/dev-photo.webp" alt="photo of developer" />
         </div>
         <div class="hero-text-container">
           <h1>Hello, I'm <span>Levon Hill</span></h1>
@@ -57,7 +57,7 @@
         <div class="about-flex-container">
           <div class="about-image" data-aos="fade-right">
             <img
-              src="../images/college-photo.jpg"
+              src="../images/college-photo.webp"
               alt="Levon Hill at Youngstown State University"
             />
           </div>
@@ -90,26 +90,56 @@
       </section>
       <!-- will add additonal Articles for my othe project cards-->
       <section id="projects" class="project-container">
-        <article class="dev-portfolio-project">
+        <article class="card">
           <div class="card-header">
-          <img src="" alt="Photo of developer Portfolio project">
-        </div>
-        <div class="card-body">
-          <h3>Developer Portfolio</h3>
-        </div>
-        <ul class="card-list-item-container">
-          <li class="list-list-item">
-            <span class="badge bg-primary">
-              HTML
-            </span>
-          </li>
-          <li class="list-list-item">
-            <span class="bage bg-primary">CSS</span>
-          </li>
-          <li class="list-list-item">
-            <span class="badge bg-primary">JavaScript</span>
-          </li>
-        </ul>
+            <img
+              src="/images/dev-portfolio.webp"
+              alt="Photo of developer Portfolio project"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Developer Portfolio</h3>
+            <p class="card-paragraph-text">
+              First Project, portfolio showcasing clean UI, interactive
+              features, and scalability.
+            </p>
+            <ul class="card-tech-stack">
+              <li class="list-list-item bg-primary"></li>
+              <li class="list-list-item bg-secondary"></li>
+              <li class="list-list-item bg-tertiary"></li>
+            </ul>
+          </div>
+
+          <div class="card-link">
+            <li><a href="">Git Repository</a></li>
+            <li><a href="">Live Page</a></li>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-header">
+            <img
+              class="sp-image"
+              src="/images/sn-login-page-sp.webp"
+              alt="Photo of developer Portfolio project"
+            />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Service Portal Widget</h3>
+            <p class="card-paragraph-text">
+              Service Now Focused, Dynamic Login , showcasing clean UI
+              interactive features, and scalability. (Coming Soon)
+            </p>
+            <ul class="card-tech-stack">
+              <li class="list-list-item bg-primary"></li>
+              <li class="list-list-item bg-secondary"></li>
+              <li class="list-list-item bg-tertiary"></li>
+            </ul>
+          </div>
+
+          <div class="card-link">
+            <li><a href="">Git Repository</a></li>
+            <li><a href="">Live Page</a></li>
+          </div>
         </article>
       </section>
     </main>
@@ -118,7 +148,6 @@
     <script>
       AOS.init();
     </script>
-
     <script src="/javascript/app.js"></script>
   </body>
 </html>
