@@ -18,6 +18,7 @@
     --color-badge-primary:#192ea6;
     --color-badge-secondary: #6b2292;
     --color-badge-tertiary:#a8a808;
+    --color-contact-background:#0C400C;
 
   /* FONT SIZES */
   --font-size-xs: 1.2rem;  /* 12px */
@@ -472,10 +473,43 @@ letter-spacing: 0.03em;
     border-radius: 1.2rem;
 }
 /*Contact Section mobile*/
-.contact-container{
+
+.form-container {
   display: flex;
   justify-content: center;
-  background-color: var(--color-secondary);
+  background-color: var(--color-contact-background);
+ 
+}
+
+.form-items {
+display: flex;
+flex-direction: column;
+color: var(--color-secondary);
+margin: 6px;
+gap: 8px;
+}
+
+.submit-btn{
+position: relative;
+ left: 1.2rem;
+background-color: var(--color--tertiary);
+margin-bottom: var(--space-xs);
+min-width: 100px;
+border-radius: 6px;
+}
+
+legend{
+  color: var(--color--tertiary);
+  text-align: center;
+  margin-top: var(--space-sm);
+}
+
+form{
+  min-width: 300px;
+  border-radius: 6px;
+}
+fieldset{
+  border: none;
 }
 
 /*media query for Navigation on Desktop and tablet*/
