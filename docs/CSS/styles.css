@@ -160,7 +160,7 @@ img{
 
 /*for header section mobile*/
 .container{
-  width: 100%;
+  width: 100vw;
     padding: var(--space-md);
     
 } 
