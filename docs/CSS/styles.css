@@ -699,36 +699,3 @@ footer{
   box-shadow: 0 -2px 12px rgba(0,0,0,0.6);
 }
 }
-@media screen and (max-height: 480px) and (orientation: landscape) {
-  .hero-section,
-  .about-section,
-  .project-container,
-  .tech-stack-container,
-  .contact-container,
-  .form-container,
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: var(--space-md);
-    width: 100%;
-  }
-
-  .hero-text-container,
-  .about-text,
-  .card,
-  .tech-stack-icons,
-  .form-items {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  #menu {
-    transform: translateX(0); /* ensures menu isn't hidden */
-    max-height: none;
-    opacity: 1;
-    position: relative;
-  }
-}
