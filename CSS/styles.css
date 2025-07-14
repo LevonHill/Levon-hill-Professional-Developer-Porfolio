@@ -90,15 +90,13 @@ html{
     box-sizing: border-box;
     font: size 62.5%;
     font-family:'Arial', sans-serif ;
-    html {
-  scroll-padding-top: 6rem; /* Adjust to your actual header height */
-}
-
+  scroll-padding-top: 6rem; /* Adjust to your actual header height very important!! */
 }
 body{
   height: 100vh;
     margin: 0 auto;
     padding: 0;
+    overflow:auto;
     background-image: url();
     background-size: cover;
     background-position: center;
@@ -464,7 +462,7 @@ text-align: center;
   flex-direction: row;
   justify-content:center;
   list-style: none;
-  margin-bottom: var(--space-sm);
+
 
 }
 
@@ -490,7 +488,11 @@ text-align: center;
 .form-container {
   display: flex;
   justify-content: center;
-  margin-top: var(--space-lg);
+  align-items: center;
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 .form-items {
@@ -504,10 +506,14 @@ gap: 8px;
 .submit-btn{
 position: relative;
  left: 1.2rem;
-background-color: var(--color--tertiary);
+background-color: var(--color-btn-primary);
 margin-bottom: var(--space-xs);
 min-width: 100px;
 border-radius: 6px;
+color:var(--color-secondary);
+}
+.submit-btn:hover{
+background-color: var(--color-btn-primary-hover);
 }
 
 legend{
@@ -519,6 +525,7 @@ legend{
 form{
   margin-top: var(--space-lg);
   min-width: 300px;
+  min-height: 500px;
   border-radius: 6px;
 }
 fieldset{
@@ -602,8 +609,6 @@ top: 0.6rem;
 }
 
 /*about section*/
-
-
 .about-flex-container{
   display: flex;
   flex-direction:row-reverse;
@@ -632,9 +637,18 @@ top: 0.6rem;
   align-items: center;
   gap: 1.2rem;
 }
-.tech-stack-container h4{
-  position: relative;
-  bottom: 250px;
-  left: 600px;
+/* desktop contact section*/
+  .contact-container{
+    padding-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
+    min-height: 600px;
+  }
+/*Desktop footer section */
+footer{
+  padding: var(--space-xl);
+  margin-top: var(--shadow-xl);
+  border-top:2px solid var(--color-primary2);
+  color: var(--color-txt-color);
+  box-shadow: 0 -2px 12px rgba(0,0,0,0.6);
 }
 }

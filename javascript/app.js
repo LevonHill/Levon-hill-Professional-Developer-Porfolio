@@ -37,3 +37,32 @@ document.addEventListener("click", (e) => {
     closeMenu();
   }
 });
+
+
+//form submission
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const form = e.target;
+
+  if (!form.checkValidity()) {
+    form.reportValidity(); // Show native HTML5 validation
+    return;
+  }
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: {
+      Accept: "application/json",
+    },
+  }).then((response) => {
+    if (response.ok) {
+      document.getElementById("form-status").style.display = "block";
+      form.reset();
+    } else {
+      alert("Something went wrong.");
+    }
+  });
+});
+
+
