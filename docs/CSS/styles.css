@@ -699,3 +699,35 @@ footer{
   box-shadow: 0 -2px 12px rgba(0,0,0,0.6);
 }
 }
+
+@media screen and (max-height: 480px) and (orientation: landscape) {
+  #menu {
+    position: relative;
+    transform: none;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm);
+    opacity: 1;
+    max-height: none;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  #menu li {
+    border: none;
+    padding: 0.4rem 1.2rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .menu-container {
+    display: none; /* hide hamburger */
+  }
+}
+
