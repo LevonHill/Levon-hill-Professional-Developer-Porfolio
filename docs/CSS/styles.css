@@ -106,7 +106,7 @@ body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: url('/images/—Pngtree—factory\ 3d\ rendering\ roll\ of_5593437\ \(1\).webp') center/cover no-repeat;
+  background: url('images/—Pngtree—factory\ 3d\ rendering\ roll\ of_5593437\ \(1\).webp') center/cover no-repeat;
   opacity: 0.3; /* control visibility here */
   z-index: -1;
 }
@@ -436,7 +436,7 @@ text-align: center;
 
 /*svg's*/
 .bg-primary{
- background-image: url(/images/html-five-svgrepo-com.svg);
+ background-image: url(images/html-five-svgrepo-com.svg);
   background-position: center;
   background-size: cover;
    background-repeat: no-repeat;
@@ -445,14 +445,14 @@ text-align: center;
 }
 
 .bg-secondary{
- background-image: url(/images/css-3-svgrepo-com.svg);
+ background-image: url(images/css-3-svgrepo-com.svg);
   background-position: center;
   background-size: cover;
    background-repeat: no-repeat;
   
 }
 .bg-tertiary{
-  background-image: url(/images/javascript-logo-to-use-svgrepo-com.svg);
+  background-image: url(images/javascript-logo-to-use-svgrepo-com.svg);
   background-position: center;
   background-size: cover;
    background-repeat: no-repeat;
