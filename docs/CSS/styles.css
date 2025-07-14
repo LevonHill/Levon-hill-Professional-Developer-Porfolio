@@ -115,14 +115,7 @@ body{
     overflow-x: hidden;
     font-size: 2rem;
 }
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: url('../images/—Pngtree—factory\ 3d\ rendering\ roll\ of_5593437\ \(1\).webp') center/cover no-repeat;
-  opacity: 0.3; /* control visibility here */
-  z-index: -1;
-}
+
 section {
   padding: var(--space-md);
 }
