@@ -83,20 +83,26 @@
 
 /*global resets*/
 *, *::before, *::after{
-    box-sizing: inherit;
+    box-sizing: border-box;
 
+}
+*{
+  max-width: 100vw;
 }
 html,body{
   height: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 main{
-flex-grow: 1;
+flex: 1;
 }
 
 html{
-    box-sizing: border-box;
+    box-sizing: inherit;
     font-size:  62.5%;
     font-family:'Arial', sans-serif ;
   scroll-padding-top: 6rem; /* Adjust to your actual header height very important!! */
@@ -141,17 +147,22 @@ li{
   color: #ffff0f;
 }
 .menu-container{
-  border-radius: 6px;
+  border-radius: 0.6rem;
 }
 
 .menu-container:hover{
   background-color: var(--color-hamburger-hovered);
 }
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /*for header section mobile*/
 .container{
-    padding: 3rem 3rem;
-    max-height:115px;
+  width: 100%;
+    padding: var(--space-md);
     
 } 
 .flex{
@@ -160,6 +171,7 @@ flex-direction: row;
 align-items: center;
 flex-wrap: wrap;
 justify-content: space-between;
+overflow-x: hidden;
 }
 .fixed{
   position: fixed;
@@ -168,6 +180,7 @@ justify-content: space-between;
   left:0;
   z-index: 999;
   background-color: var(--color-secondary);
+  overflow-x: hidden;
 }
 
 .nav-left-logo a{
@@ -180,14 +193,18 @@ font-weight: 700;
    background-color: var(--color-nav-bar-bg);
 }
 
+/*experimental */
+section, .project-container, .tech-stack-container, .contact-container{
+  max-width: 100%;
+}
 
 /*mobile-nav menu */
 #menu{
     position: fixed;
+    max-width: 100vw;
     bottom: 1;
     left: 0;
     width: 150px;
-    height: 100vh;
     transform: translateX(-100%);
     transition: transform 0.4s ease-in-out, max-height 0.3s ease-out;
 z-index: 999;
@@ -203,7 +220,7 @@ z-index: 999;
     border-right: 2px solid var(--color-primary2);
     background-color: rgba(18, 18, 18, 0.98);
     color:var(--color-primary2);
-    border-radius: 8px;
+    border-radius: 0.8rem;
 }
 
 /* When menu is open on mobile */
@@ -263,7 +280,7 @@ margin-bottom: var(--space-md);
   height: auto;
   width: 100%;
   max-width: 300px;
-  margin-bottom: 6px;
+  margin-bottom: 0.6rem;
   border-radius: 50%;
   object-fit: cover;
   
@@ -290,7 +307,7 @@ font-weight: 900;
   margin-top: var(--space-xs);
   margin-bottom: var(--space-xs);
   border: 2px solid black;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   color: #000000;
   background-color: var(--color-primary);
 }
@@ -334,7 +351,7 @@ letter-spacing: 0.03em;
 }
 .nav-back-to-top::after{
   display: inline-block;
-  margin-left: 8px;
+  margin-left: 0.8rem;
   font-size: 1.2rem;
   cursor: pointer;
   content: " ↑";
@@ -344,8 +361,8 @@ letter-spacing: 0.03em;
 }
 
 .about-image img{
-  width: 400px;
-  height: 400px;
+  min-width: 400px;
+  max-height: 400px;
   object-fit: cover;
   display: block;
   box-shadow: var(--shadow-lg);
@@ -375,7 +392,6 @@ text-align: center;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  max-width: 380px;
   min-height: 520px;
   background-color: #1e1e1e;
   color: white;
@@ -428,7 +444,7 @@ text-align: center;
 .card-paragraph-text{
   color: var(--color-txt-color);
   line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 
 .card-link a{
@@ -446,8 +462,8 @@ text-align: center;
   justify-content: space-evenly;
 }
 .list-list-item {
-  width: 80px;
-  height: 80px;
+  width: 8rem;
+  height: 8rem;
   background-size: contain; 
   background-repeat: no-repeat;
   background-position: center;
@@ -461,7 +477,7 @@ text-align: center;
   background-position: center;
   background-size: cover;
    background-repeat: no-repeat;
-   height: 90px;
+   height: 9rem;
   
 }
 
@@ -554,23 +570,34 @@ fieldset{
 }
 
 /*footer sectrion mobile*/
-footer{
+.footer-container{
   background-color: var(--color-nav-bar-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  padding: var(--space-lg);
+  margin-top: auto;
+  width: 100%;
+
 }
 footer p {
   color: var(--color-badge-tertiary);
 }
 .footer-links{
+  flex-wrap: wrap;
 display: flex;
-justify-content: row;
-gap: 3px;
+justify-content: center;
+gap: var(--space-sm);
 list-style-type:none;
+padding: var(--space-sm);
+max-width: 100%;
 }
 .footer-links a{
   color: var(--color-txt-color);
+  word-break: break-word;
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
 }
 .footer-links a:hover{
   color: var(--color-secondary);
@@ -624,7 +651,7 @@ align-items:center;
 
 .hero-text-container a{
 margin: 0.5rem;
-padding: 6px;
+padding: 0.6rem;
 position: relative;
 top: 0.6rem;
 }
