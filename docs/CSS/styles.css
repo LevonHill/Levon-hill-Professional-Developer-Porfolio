@@ -85,23 +85,33 @@
 *, *::before, *::after{
     box-sizing: inherit;
 
+    
 }
 html{
     box-sizing: border-box;
-    font: size 62.5%;
+    font-size:  62.5%;
     font-family:'Arial', sans-serif ;
   scroll-padding-top: 6rem; /* Adjust to your actual header height very important!! */
 }
 body{
-  height: 100vh;
     margin: 0 auto;
     padding: 0;
+    display: flex;
+    flex-direction: column;
     overflow:auto;
-    background-image: url();
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  min-height: 100vh;
+  font-size: var(--font-size-md);
 }
+
+main {
+  flex: 1;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body::before {
   content: '';
   position: fixed;
@@ -110,10 +120,7 @@ body::before {
   opacity: 0.3; /* control visibility here */
   z-index: -1;
 }
-section {
-  min-height: 100vh;
-  padding: var(--space-md) var(--space-md);
-}
+
 
 .menu{
   padding-top: var(--height-header);
@@ -244,7 +251,7 @@ z-index: 999;
   gap:var(--space-md);
 }
 .developer-photo-container{
-margin-top: var(--space-xxxl);
+margin-top: var(--space-lg);
 box-shadow: 1 1 1 gray;
 overflow:hidden ;
 margin-bottom: var(--space-md);
@@ -334,6 +341,13 @@ letter-spacing: 0.03em;
 .nav-back-to-top:hover{
   transform: translate(-2px);
 }
+.about-image {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
 
 .about-image img{
   width: 400px;
@@ -396,7 +410,7 @@ text-align: center;
 }
 .card-body p{
   text-align: center;
-  margin: bottom 2px;
+  margin-bottom: 2px;
 }
 
 .card-title {
@@ -538,15 +552,24 @@ footer{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 6rem;
+  padding: var(--space-md);
+  text-align: center;
 }
 footer p {
   color: var(--color-badge-tertiary);
 }
 .footer-links{
 display: flex;
-justify-content: row;
+flex-direction:row;
 gap: 3px;
 list-style-type:none;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-md);
+
 }
 .footer-links a{
   color: var(--color-txt-color);
@@ -623,6 +646,7 @@ top: 0.6rem;
   flex-direction: row;
   justify-content: center;
   align-items: center ;
+  flex-wrap: wrap;
 
 }
 .project-title{
@@ -646,7 +670,7 @@ top: 0.6rem;
 /*Desktop footer section */
 footer{
   padding: var(--space-xl);
-  margin-top: var(--shadow-xl);
+  margin-top: var(--space-xl);
   border-top:2px solid var(--color-primary2);
   color: var(--color-txt-color);
   box-shadow: 0 -2px 12px rgba(0,0,0,0.6);
